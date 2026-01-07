@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  prajos-backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+    volumes:
+      - ./static:/app/static:ro
+    restart: unless-stopped
+    container_name: prajos-cms

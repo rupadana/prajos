@@ -1,0 +1,282 @@
+/* JokoUI - Styling Framework inspired by Indonesian simplicity */
+
+:root {
+    --joko-primary: #FF6B35;
+    --joko-secondary: #004E89;
+    --joko-success: #00B74A;
+    --joko-danger: #F93943;
+    --joko-warning: #FFA900;
+    --joko-light: #F7F7F7;
+    --joko-dark: #2C3E50;
+    --joko-white: #FFFFFF;
+    --joko-border: #E0E0E0;
+    --joko-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--joko-dark);
+}
+
+.joko-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.joko-header {
+    background: var(--joko-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--joko-shadow);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.joko-title {
+    font-size: 2.5rem;
+    color: var(--joko-primary);
+    margin-bottom: 10px;
+}
+
+.joko-subtitle {
+    font-size: 1.1rem;
+    color: var(--joko-secondary);
+}
+
+/* Card Styles */
+.joko-card {
+    background: var(--joko-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--joko-shadow);
+    margin-bottom: 30px;
+}
+
+.joko-card-title {
+    font-size: 1.8rem;
+    color: var(--joko-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--joko-primary);
+}
+
+/* Form Styles */
+.joko-form-group {
+    margin-bottom: 20px;
+}
+
+.joko-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--joko-dark);
+    font-size: 1rem;
+}
+
+.joko-input,
+.joko-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--joko-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.joko-input:focus,
+.joko-textarea:focus {
+    outline: none;
+    border-color: var(--joko-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.joko-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button Styles */
+.joko-button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.joko-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px var(--joko-shadow);
+}
+
+.joko-button-primary {
+    background: var(--joko-primary);
+    color: var(--joko-white);
+}
+
+.joko-button-primary:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--joko-shadow);
+}
+
+.joko-button-secondary {
+    background: var(--joko-light);
+    color: var(--joko-dark);
+}
+
+.joko-button-secondary:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.joko-button-success {
+    background: var(--joko-success);
+    color: var(--joko-white);
+}
+
+.joko-button-danger {
+    background: var(--joko-danger);
+    color: var(--joko-white);
+}
+
+.joko-button-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* Posts List Styles */
+.joko-posts-list {
+    display: grid;
+    gap: 20px;
+}
+
+.joko-post-item {
+    border: 2px solid var(--joko-border);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background: var(--joko-light);
+}
+
+.joko-post-item:hover {
+    border-color: var(--joko-primary);
+    box-shadow: 0 4px 12px var(--joko-shadow);
+    transform: translateY(-2px);
+}
+
+.joko-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.joko-post-title {
+    font-size: 1.5rem;
+    color: var(--joko-secondary);
+    margin-bottom: 5px;
+}
+
+.joko-post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.joko-post-content {
+    color: var(--joko-dark);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+}
+
+.joko-post-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Loading and Empty States */
+.joko-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.joko-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.joko-empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+.joko-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--joko-white);
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .joko-title {
+        font-size: 2rem;
+    }
+    
+    .joko-card {
+        padding: 20px;
+    }
+    
+    .joko-button-group {
+        flex-direction: column;
+    }
+    
+    .joko-button {
+        width: 100%;
+    }
+}
+
+/* Alert/Notification Styles */
+.joko-alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.joko-alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.joko-alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
