@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAJOS - Blog CMS</title>
+    <link rel="stylesheet" href="/css/jokoui.css">
+</head>
+<body>
+    <div class="joko-container">
+        <header class="joko-header">
+            <h1 class="joko-title">📝 PRAJOS Blog CMS</h1>
+            <p class="joko-subtitle">Fullstack CMS powered by Prabogo, JokoUI & SawitDB</p>
+        </header>
+
+        <main class="joko-main">
+            <!-- Create/Edit Form Section -->
+            <section class="joko-card" id="formSection">
+                <h2 class="joko-card-title">✍️ Tulis Post Baru</h2>
+                <form id="postForm" class="joko-form">
+                    <input type="hidden" id="postId">
+                    
+                    <div class="joko-form-group">
+                        <label for="title" class="joko-label">Judul</label>
+                        <input type="text" id="title" class="joko-input" placeholder="Masukkan judul post..." required>
+                    </div>
+                    
+                    <div class="joko-form-group">
+                        <label for="author" class="joko-label">Penulis</label>
+                        <input type="text" id="author" class="joko-input" placeholder="Nama penulis..." required>
+                    </div>
+                    
+                    <div class="joko-form-group">
+                        <label for="content" class="joko-label">Konten</label>
+                        <textarea id="content" class="joko-textarea" rows="8" placeholder="Tulis konten post di sini..." required></textarea>
+                    </div>
+                    
+                    <div class="joko-button-group">
+                        <button type="submit" class="joko-button joko-button-primary">
+                            💾 Simpan Post
+                        </button>
+                        <button type="button" class="joko-button joko-button-secondary" onclick="resetForm()">
+                            🔄 Reset
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Posts List Section -->
+            <section class="joko-card">
+                <h2 class="joko-card-title">📚 Daftar Post</h2>
+                <div id="postsList" class="joko-posts-list">
+                    <div class="joko-loading">Memuat posts...</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="joko-footer">
+            <p>Made with ❤️ using Prabogo + JokoUI + SawitDB</p>
+        </footer>
+    </div>
+
+    <script src="/js/jokoui.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
